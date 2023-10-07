@@ -1,7 +1,12 @@
 #include <gtk/gtk.h>
 
 static void app_activate (GApplication *app, gpointer *data) {
-    g_print("application activated");
+    GtkWidget* win;
+
+    win = gtk_application_window_new(GTK_APPLICATION(app));
+    gtk_window_set_title(GTK_WINDOW(win), "gtk4tuto");
+    gtk_window_set_default_size(GTK_WINDOW(win), 50, 50);
+    gtk_window_present(GTK_WINDOW(win));
 }
 
 int main(int argc, char** argv){
