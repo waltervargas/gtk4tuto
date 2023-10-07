@@ -7,7 +7,13 @@ project(
 gtk = dependency('gtk4')
 
 executable(
-    'pr1',
-    'pr1.c',
+    'justwindow',
+    'justwindow.c',
+    dependencies: [gtk]
+)
+
+executable(
+    'widgets',
+    'widgets.c',
     dependencies: [gtk]
 )
