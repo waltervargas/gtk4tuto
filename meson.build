@@ -17,3 +17,9 @@ executable(
     'widgets.c',
     dependencies: [gtk]
 )
+
+executable(
+    'textview',
+    'textview.c',
+    dependencies: [gtk]
+)
